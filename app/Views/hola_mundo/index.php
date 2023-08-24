@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Hola desde CodeIgniter</h1>
+    <p><?php echo $mensaje_p; ?></p>
 </body>
 </html>
