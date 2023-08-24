@@ -33,6 +33,8 @@ $routes->get('/', 'Home::index');
 
 $routes->get('hola-mundo', 'HolaMundo::index');
 
+$routes->post('hola-mundo/capturar', 'HolaMundo::capturar');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
