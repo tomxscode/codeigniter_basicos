@@ -24,18 +24,21 @@
     <div class="container">
 
         <div class="row mt-3">
-            <form action="#" method="post">
+            <form method="post" id="enviarTarea">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Escribe una tarea para agregarla...">
+                    <input type="text" class="form-control" id="tareaContenido" placeholder="Escribe una tarea para agregarla...">
                     <button type="submit" class="btn btn-success">Agregar</button>
                 </div>
             </form>
         </div>
 
-        <div class="row mt-3" id="tareas"></div>
+        <div class="row mt-3">
+            <ul class="list-group" id="tareas"></ul>
+        </div>
 
 
     </div>
+    <script src="./js/tarea.js"></script>
 </body>
 
 </html>
