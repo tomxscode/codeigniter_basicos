@@ -35,6 +35,9 @@ $routes->get('hola-mundo', 'HolaMundo::index');
 
 $routes->post('hola-mundo/capturar', 'HolaMundo::capturar');
 
+// Ruta de tareas
+$routes->get('tareas', 'Tareas::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
