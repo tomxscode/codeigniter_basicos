@@ -1,4 +1,4 @@
-document.getElementById('enviarTarea').addEventListener('submit', function(evt) {
+document.getElementById('enviarTarea').addEventListener('submit', function (evt) {
     evt.preventDefault();
     let contenido = document.getElementById('tareaContenido').value;
     console.log(contenido)
@@ -12,7 +12,16 @@ document.getElementById('enviarTarea').addEventListener('submit', function(evt) 
                 let datos = JSON.parse(xhr.responseText);
                 console.log(datos);
                 let listaTareas = document.getElementById("tareas");
-                listaTareas.innerHTML += `<li class="list-group-item">${datos.tarea}</li>`
+                listaTareas.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>${datos.tarea}</span>
+                        <div>
+                            <button type="button" class="btn btn-success">Listo</button>
+                            <button type="button" class="btn btn-warning">Editar</button>
+                            <button type="button" class="btn btn-danger">Borrar</button>
+                        </div>
+                    </li>
+                    `
             }
         }
         xhr.send('tarea-input=' + encodeURIComponent(contenido));
